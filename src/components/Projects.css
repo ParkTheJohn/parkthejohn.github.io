@@ -1,0 +1,13 @@
+.projectsTitle {
+    color: white;
+    padding: 5%;
+    font-size: 6vw;
+}
+
+.projectsContent {
+    padding: 5%;
+}
+
+.projectsContainer {
+    background-color: #ccc5b5;
+}
