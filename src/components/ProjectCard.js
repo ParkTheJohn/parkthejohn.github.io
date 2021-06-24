@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -9,10 +10,11 @@ import projectList from "./ProjectsData.js";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Button from '@material-ui/core/Button';
+import MuiDialogTitle from '@material-ui/core/DialogTitle';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import './ProjectCard.css';
 
 const useStyles = makeStyles({
   root: {
@@ -22,6 +24,33 @@ const useStyles = makeStyles({
     height: 300,
   },
 });
+
+const styles = (theme) => ({
+    root: {
+      margin: 0,
+      padding: theme.spacing(2),
+    },
+    closeButton: {
+      position: 'absolute',
+      right: theme.spacing(1),
+      top: theme.spacing(1),
+      color: theme.palette.grey[500],
+    },
+  });
+
+const DialogTitle = withStyles(styles)((props) => {
+    const { children, classes, onClose, ...other } = props;
+    return (
+      <MuiDialogTitle disableTypography className={classes.root} {...other}>
+        <Typography variant="h6">{children}</Typography>
+        {onClose ? (
+          <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
+            <CloseIcon />
+          </IconButton>
+        ) : null}
+      </MuiDialogTitle>
+    );
+  });
 
 const ProjectCard = (param) => {
     const [open, setOpen] = React.useState(false);
@@ -44,8 +73,8 @@ const ProjectCard = (param) => {
                     onClick={handleClickOpen}
                 >
                     <CardMedia
-                    className={classes.media}
-                    image={projectList[param.index].image}
+                        className={classes.media}
+                        image={projectList[param.index].logo}
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -63,17 +92,37 @@ const ProjectCard = (param) => {
                     onClose={handleClose}
                     aria-labelledby="responsive-dialog-title"
                 >
-                <DialogTitle id="responsive-dialog-title">{projectList[param.index].name}</DialogTitle>
+                <DialogTitle id="responsive-dialog-title" onClose={handleClose}>
+                    {projectList[param.index].name}
+                </DialogTitle>
                 <DialogContent dividers>
                     <Typography >
-                            {projectList[param.index].shortDescription}
+                      {projectList[param.index].shortDescription}
                     </Typography>
+                    <img className="contentImage" src={projectList[param.index].image1} 
+                      alt="Project Img 1"
+                    />
+                    <Typography >
+                      {projectList[param.index].shortDescription}
+                    </Typography>
+                    <img className="contentImage" src={projectList[param.index].image2} 
+                      alt="Project Img 2"
+                    />
+                    <Typography >
+                      {projectList[param.index].shortDescription}
+                    </Typography>
+                    <img className="contentImage" src={projectList[param.index].image3} 
+                      alt="Project Img 3"
+                    />
+                    <Typography >
+                      {projectList[param.index].shortDescription}
+                    </Typography>
+                    {param.index === 3 ? "" : <video
+                      className="contentVideo"
+                      controls
+                      src={projectList[param.index].demo}
+                    />}
                 </DialogContent>
-                <DialogActions>
-                    <Button autoFocus onClick={handleClose} >
-                        Close
-                    </Button>
-                </DialogActions>
             </Dialog>
         </div>
     )

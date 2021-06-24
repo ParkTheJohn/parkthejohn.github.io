@@ -1,0 +1,17 @@
+.contentImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: pre;
+    width: 80%;
+    padding: 10%;
+}
+
+.contentVideo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: pre;
+    width: 80%;
+    padding: 10%;
+}
