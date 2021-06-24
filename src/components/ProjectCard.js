@@ -91,6 +91,7 @@ const ProjectCard = (param) => {
                     open={open}
                     onClose={handleClose}
                     aria-labelledby="responsive-dialog-title"
+                    maxWidth="xl"
                 >
                 <DialogTitle id="responsive-dialog-title" onClose={handleClose}>
                     {projectList[param.index].name}
@@ -99,29 +100,42 @@ const ProjectCard = (param) => {
                     <Typography >
                       {projectList[param.index].shortDescription}
                     </Typography>
-                    <img className="contentImage" src={projectList[param.index].image1} 
-                      alt="Project Img 1"
-                    />
+                    {param.index === 3 ? <img className="contentImageLandscape" src={projectList[param.index].image1} 
+                      alt="Project Img 1"/> 
+                      : fullScreen ? <img className="contentImagePortraitMobile" src={projectList[param.index].image1} 
+                      alt="Project Img 1"/> 
+                      : <img className="contentImagePortraitWeb" src={projectList[param.index].image1} 
+                      alt="Project Img 1"/> 
+                    }
                     <Typography >
                       {projectList[param.index].shortDescription}
                     </Typography>
-                    <img className="contentImage" src={projectList[param.index].image2} 
-                      alt="Project Img 2"
-                    />
+                    {param.index === 3 ? <img className="contentImageLandscape" src={projectList[param.index].image2} 
+                      alt="Project Img 1"/> 
+                      : fullScreen ? <img className="contentImagePortraitMobile" src={projectList[param.index].image2} 
+                      alt="Project Img 1"/> 
+                      : <img className="contentImagePortraitWeb" src={projectList[param.index].image2} 
+                      alt="Project Img 1"/> 
+                    }
                     <Typography >
                       {projectList[param.index].shortDescription}
                     </Typography>
-                    <img className="contentImage" src={projectList[param.index].image3} 
-                      alt="Project Img 3"
-                    />
+                    {param.index === 3 || param.index === 1 ? <img className="contentImageLandscape" src={projectList[param.index].image3} 
+                      alt="Project Img 1"/> 
+                      : fullScreen ? <img className="contentImagePortraitMobile" src={projectList[param.index].image3} 
+                      alt="Project Img 1"/> 
+                      : <img className="contentImagePortraitWeb" src={projectList[param.index].image3} 
+                      alt="Project Img 1"/> 
+                    }
                     <Typography >
                       {projectList[param.index].shortDescription}
                     </Typography>
-                    {param.index === 3 ? "" : <video
-                      className="contentVideo"
-                      controls
-                      src={projectList[param.index].demo}
-                    />}
+                    {param.index === 2 || param.index === 3 ? "" 
+                      : param.index === 0 ? <video className="contentVideoPortrait" controls
+                      src={projectList[param.index].demo}/> 
+                      : <video className="contentVideoLandscape" controls
+                      src={projectList[param.index].demo}/>
+                      }
                 </DialogContent>
             </Dialog>
         </div>

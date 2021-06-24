@@ -1,4 +1,4 @@
-.contentImage {
+.contentImageLandscape {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -7,7 +7,34 @@
     padding: 10%;
 }
 
-.contentVideo {
+.contentImagePortraitMobile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: pre;
+    width: 90%;
+    padding: 10%;
+}
+
+.contentImagePortraitWeb {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: pre;
+    width: 50%;
+    padding: 10%;
+}
+
+.contentVideoPortrait {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: pre;
+    width: 50%;
+    padding: 10%;
+}
+
+.contentVideoLandscape {
     display: block;
     margin-left: auto;
     margin-right: auto;

@@ -11,6 +11,13 @@ import emailMail from "./images/emailMail.png";
 import emailFull from "./images/emailFull.png";
 import emailDemo from "./videos/emailDemo.mp4";
 
+import chefLog from "./images/chefQuestLog.png";
+import chefHome from "./images/chefQuestMain.png";
+import chefQ from "./images/chefQuestQuest.png";
+
+import pacDiscount from "./images/pacDiscount.png";
+import pacReflex from "./images/pacReflex.gif";
+import pacCapture from "./images/pacCapture.gif";
 
 
 
@@ -40,12 +47,18 @@ const projectList = [
         "shortDescription": "ChefQuest is a gamified cooking app designed to make cooking feel less intimidating and fun for people who don't cook regularly but want to learn how to cook at home during the COVID-19 Pandemic.",
         "longDescription": "3lD",
         "logo": chefLogo,
+        "image1": chefLog,
+        "image2": chefHome,
+        "image3": chefQ,
     },
     {
         "name": "PacAI",
         "shortDescription": "Multi-Agent Reinforcement Learning Pac-Man that calculates the best action over the given iterations, as well as many pacman variants such as multi-player capture-the-flag that involves adversarial search, Q-learning.",
         "longDescription": "4lD",
         "logo": pacLogo,
+        "image1": pacDiscount,
+        "image2": pacReflex,
+        "image3": pacCapture,
     },
 ];
 
