@@ -10,7 +10,7 @@ const Intro = () => {
             <img src={wallpaper} alt="Wallpaper" className="introImage" />
             <div className="introText">
                 <h1 className="introTextHello">Hi,</h1>
-                <h1 className="introTextName">I'm Jongwoo Park,</h1>
+                <h1 className="introTextName">I'm Jongwoo Park AAA,</h1>
                 <h1 className="introTextTitle">A Software Engineer.</h1>
                 <Button variant ="outlined" size="large" style={{color:"black"}}>
                     About Me
