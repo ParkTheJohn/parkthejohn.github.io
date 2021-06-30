@@ -2,13 +2,13 @@
 
 .introContainer {
     position: relative;
+    height: 50vw;
 }
 
 .introImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 30%;
+  width: 100%; /* width of container */
+  height: 100%; /* height of container */
+  object-fit: cover;
 }
 
 .introText {
@@ -20,17 +20,17 @@
 
 .introTextHello {
     color: black;
-    font-size: 5vw;
+    font-size: 6vw;
   }
 
 .introTextName {
     color: black;
-    font-size: 5vw;
+    font-size: 6vw;
   }
 
 .introTextTitle {
   color: black;
-  font-size: 5vw;
+  font-size: 3vw;
 }
 
 body {

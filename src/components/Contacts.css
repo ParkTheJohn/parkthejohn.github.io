@@ -1,0 +1,13 @@
+.contactsContainer {
+    background-color: black;
+    border-style: solid;
+    border-color: black;
+    border-width: 2vw;
+}
+
+.contactsText {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    border-top: 5vw solid black;
+}

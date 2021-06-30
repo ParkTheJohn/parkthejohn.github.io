@@ -1,7 +1,6 @@
 import React from "react";
 import wallpaper from "./images/whiteBackground.jpg";
 import './Intro.css';
-import Button from '@material-ui/core/Button';
 
 const Intro = () => {
 
@@ -9,12 +8,8 @@ const Intro = () => {
         <div className="introContainer">
             <img src={wallpaper} alt="Wallpaper" className="introImage" />
             <div className="introText">
-                <h1 className="introTextHello">Hi,</h1>
-                <h1 className="introTextName">I'm Jongwoo Park,</h1>
-                <h1 className="introTextTitle">A Software Engineer.</h1>
-                <Button variant ="outlined" size="large" style={{color:"black"}}>
-                    About Me
-                </Button>
+                <h1 className="introTextName">Jongwoo Park</h1>
+                <h1 className="introTextTitle">Software Engineer</h1>
             </div>
         </div>
     )
