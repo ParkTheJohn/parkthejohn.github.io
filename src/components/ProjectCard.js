@@ -135,8 +135,8 @@ const ProjectCard = (param) => {
                     }
                   </Carousel>
                   <Typography >
-                      {projectList[param.index].shortDescription}
-                    </Typography>
+                      {projectList[param.index].longDescription}
+                  </Typography>
 
                   {param.index === 2 || param.index === 3 ? "" 
                       : fullScreen ? <video className="contentMobile"  controls src={projectList[param.index].demo}/> 

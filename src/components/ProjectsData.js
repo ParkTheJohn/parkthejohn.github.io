@@ -25,7 +25,7 @@ const projectList = [
     {
         "name": "FitRecur",
         "shortDescription": "FitRecur is a fitness tracking mobile application that focuses on simplicity and allow users to keep track, record, and display their workouts and progress.",
-        "longDescription": "1lD",
+        "longDescription": "FitRecur is a fitness tracking mobile application that focuses on simplicity and allows users to keep track, record, and display their workouts and progress.The problem that we wanted to solve by developing this app was that most fitness apps have too much unrelated information and are bloated with advertisements. FitRecur was developed by a 5-member team, incorporating the Agile Software Development methodology for a disciplined management process to encourage teamwork. The application utilized Flutter as the frontend framework to allow cross-platform framework data synchronization for UI rendering for both Android and iOS, and FireStore as backend to store multi-user authentication as well as respective user progression exercise data. We had three weekly Scrum Meetings and integrated Miro as an extensive Scrum board for release plans, sprint plans, sprint retrospectives, etc. ",
         "logo": fitRecurLogo,
         "image1": fitRecurHome,
         "image2": fitRecurExercise,
@@ -35,7 +35,7 @@ const projectList = [
     {
         "name": "Full Stack Email Web Application",
         "shortDescription": "An E-Mail system as a Single page Full Stack Web Application using the NERP Stack: Node.js, Express, React, and PostgreSQL.",
-        "longDescription": "2lD",
+        "longDescription": "This project is an E-Mail system as a Single page Full Stack Web Application individually developed using the NERP Stack: Node.js, Express, React, and PostgreSQL. One of the biggest challenges that I managed to accomplish in this project was incorporating a “mobile first” approach with React Hooks for responsive web design to adapt to the user’s environment. The project also presented a server with OpenAPI constrained API to the single page web application running in the browser, while storing data in the PostgreSQL database. Another main feature of this project that was challenging was implementing the multi-user login authentication feature. This required the use of Express.js as a middleware for session and JSON Web Token. Furthermore, for each user that was authenticated in the multi-user authentication, OpenAPI schema along with Node.js and Express RESTful API backed by PostgreSQL database  was utilized for CRUD validation for each user on the multi-user authentication. ",
         "logo": emailLogo,
         "image1": emailHome,
         "image2": emailMail,
@@ -45,7 +45,7 @@ const projectList = [
     {
         "name": "ChefQuest",
         "shortDescription": "ChefQuest is a gamified cooking app designed to make cooking feel less intimidating and fun for people who don't cook regularly but want to learn how to cook at home during the COVID-19 Pandemic.",
-        "longDescription": "3lD",
+        "longDescription": "ChefQuest is a gamified cooking app designed to make cooking feel less intimidating and fun for people who don't cook regularly but want to learn how to cook at home during the COVID-19 Pandemic. The motivation for developing this app was to help people that are in need of help during the COVID-19 lockdown, where ordering delivery food all the time may become financially overwhelming, and home cooking may become essential. One of the main goals of this application was creating an appealing and intuitive UI/UX for users. With weekly design sprints and scrum meetings, Agile methodology was incorporated in the development and design process. ChefQuest was developed using React Native as frontend framework for cross-platform deployment in both Android and iOS, and FireBase as backend database to store individual user information and progress in the game. Different from other projects, ChefQuest had many attempts at creating a better UI/UX, which involved prototyping and wireframing many different versions of our application. This included A/B testing and many usability tests observations.",
         "logo": chefLogo,
         "image1": chefLog,
         "image2": chefHome,

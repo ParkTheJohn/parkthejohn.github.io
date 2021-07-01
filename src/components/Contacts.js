@@ -10,7 +10,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 const Contacts = () => {
 
     const handleEmail = () => {
-      window.location.href="mailto:parkjohn981001@gmail.com";
+        window.location.href="mailto:parkjohn981001@gmail.com";
     };
 
     const handleLinkedIn = () => {
@@ -18,11 +18,11 @@ const Contacts = () => {
       };
 
     const handleGithub = () => {
-    window.open("https://github.com/ParkTheJohn");
+        window.open("https://github.com/ParkTheJohn");
     };
 
     const handleInstagram = () => {
-    window.open("https://www.instagram.com/parkthejohn/");
+        window.open("https://www.instagram.com/parkthejohn/");
     };
 
     return (
@@ -34,6 +34,7 @@ const Contacts = () => {
                         startIcon={<EmailIcon />}
                         style={{color: "white", textTransform: "none"}}
                         onClick={handleEmail}
+                        size="large"
                     >
                         Email
                     </Button>
@@ -44,6 +45,7 @@ const Contacts = () => {
                         startIcon={<LinkedInIcon />}
                         style={{color: "white", textTransform: "none"}}
                         onClick={handleLinkedIn}
+                        size="large"
                     >
                         LinkedIn
                     </Button>
@@ -54,6 +56,7 @@ const Contacts = () => {
                         startIcon={<GitHubIcon />}
                         style={{color: "white", textTransform: "none"}}
                         onClick={handleGithub}
+                        size="large"
                     >
                         Github
                     </Button>
@@ -64,6 +67,7 @@ const Contacts = () => {
                         startIcon={<InstagramIcon />}
                         style={{color: "white", textTransform: "none"}}
                         onClick={handleInstagram}
+                        size="large"
                     >
                         Instagram
                     </Button>

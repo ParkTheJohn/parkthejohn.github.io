@@ -2,8 +2,15 @@ import React from "react";
 import './AboutMe.css';
 import Grid from '@material-ui/core/Grid';
 import portrait from "./images/aboutMePortraitTest.jpg";
+import GetAppIcon from '@material-ui/icons/GetApp';
+import Button from '@material-ui/core/Button';
+
 
 const AboutMe = () => {
+
+    const handleResume = () => {
+        window.open("https://drive.google.com/file/d/1ToiQ3Hvl05cqtrW-yDxn5iD3Uq2cioNl/view");
+    };
 
     return (
         <div className="aboutMeContainer">
@@ -34,15 +41,17 @@ const AboutMe = () => {
     Hendrerit parturient habitant pharetra rutrum gravida porttitor eros feugiat. Mollis elit
     sodales taciti duis praesent id. Consequat urna vitae morbi nunc congue.
                     </div>
-                    <br/>
                     <div className="aboutMeContent">
-                Lorem ipsum odor amet, consectetuer adipiscing elit. Ac purus in massa egestas mollis varius;
-    dignissim elementum. Mollis tincidunt mattis hendrerit dolor eros enim, nisi ligula ornare.
-    Hendrerit parturient habitant pharetra rutrum gravida porttitor eros feugiat. Mollis elit
-    sodales taciti duis praesent id. Consequat urna vitae morbi nunc congue. Lorem ipsum odor amet, consectetuer adipiscing elit. Ac purus in massa egestas mollis varius;
-    dignissim elementum. Mollis tincidunt mattis hendrerit dolor eros enim, nisi ligula ornare.
-    Hendrerit parturient habitant pharetra rutrum gravida porttitor eros feugiat. Mollis elit
-    sodales taciti duis praesent id. Consequat urna vitae morbi nunc congue.
+                    <Button
+                        variant="outlined"
+                        color="inherit"
+                        startIcon={<GetAppIcon />}
+                        style={{color: "black", textTransform: "none"}}
+                        onClick={handleResume}
+                        size="large"
+                    >
+                        Resume
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
