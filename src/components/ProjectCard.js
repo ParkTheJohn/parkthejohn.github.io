@@ -15,6 +15,8 @@ import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import './ProjectCard.css';
+import Carousel from 'react-material-ui-carousel'
+import { Paper, Button } from '@material-ui/core'
 
 const useStyles = makeStyles({
   root: {
@@ -52,6 +54,20 @@ const DialogTitle = withStyles(styles)((props) => {
     );
   });
 
+  function Item(props)
+{
+    return (
+        <Paper>
+            <h2>{props.item.name}</h2>
+            <p>{props.item.description}</p>
+
+            <Button className="CheckButton">
+                Check it out!
+            </Button>
+        </Paper>
+    )
+}
+
 const ProjectCard = (param) => {
     const [open, setOpen] = React.useState(false);
     const theme = useTheme();
@@ -65,6 +81,17 @@ const ProjectCard = (param) => {
     const handleClose = () => {
         setOpen(false);
     };
+
+    var items = [
+      {
+          name: "Random Name #1",
+          description: "Probably the most random thing you have ever seen!"
+      },
+      {
+          name: "Random Name #2",
+          description: "Hello World!"
+      }
+  ]
 
     return (
         <div>
@@ -91,12 +118,17 @@ const ProjectCard = (param) => {
                     open={open}
                     onClose={handleClose}
                     aria-labelledby="responsive-dialog-title"
-                    maxWidth="xl"
+                    maxWidth="xs"
                 >
                 <DialogTitle id="responsive-dialog-title" onClose={handleClose}>
                     {projectList[param.index].name}
                 </DialogTitle>
                 <DialogContent dividers>
+
+                  <Carousel>
+                    {items.map( (item, i) => <Item key={i} item={item}/>)}
+                  </Carousel>
+                  
                     <Typography >
                       {projectList[param.index].shortDescription}
                     </Typography>
