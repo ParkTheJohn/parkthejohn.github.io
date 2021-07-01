@@ -12,7 +12,7 @@ const Projects = () => {
             <div className="projectsTitleContainer">
                 <h1 className="projectsTitle">Projects</h1>
             </div>
-            <Grid container spacing={0}>
+            <Grid container spacing={0} >
                 {indices.map((index) => (
                     <Grid key={index} item xs={12} sm={6} align="center">
                     <div className="projectsContent">

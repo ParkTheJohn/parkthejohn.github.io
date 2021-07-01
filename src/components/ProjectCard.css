@@ -1,44 +1,27 @@
-.contentImageLandscape {
+.contentPortrait {
     display: block;
     margin-left: auto;
     margin-right: auto;
     white-space: pre;
-    width: 80%;
-    padding: 10%;
+    width: 60%;
 }
 
-.contentImagePortraitMobile {
+.contentLandscape {
     display: block;
     margin-left: auto;
     margin-right: auto;
     white-space: pre;
-    width: 90%;
-    padding: 10%;
+    width: 100%;
+    padding: 5%;
 }
 
-.contentImagePortraitWeb {
+.contentMobile {
     display: block;
     margin-left: auto;
     margin-right: auto;
     white-space: pre;
-    width: 50%;
-    padding: 10%;
+    width: 100%;
+    padding: 5%;
 }
 
-.contentVideoPortrait {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    white-space: pre;
-    width: 50%;
-    padding: 10%;
-}
 
-.contentVideoLandscape {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    white-space: pre;
-    width: 80%;
-    padding: 10%;
-}

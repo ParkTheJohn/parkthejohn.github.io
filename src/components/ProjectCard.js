@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
@@ -16,7 +15,9 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import './ProjectCard.css';
 import Carousel from 'react-material-ui-carousel'
-import { Paper, Button } from '@material-ui/core'
+import { Button } from '@material-ui/core'
+import CardActions from '@material-ui/core/CardActions';
+
 
 const useStyles = makeStyles({
   root: {
@@ -54,19 +55,7 @@ const DialogTitle = withStyles(styles)((props) => {
     );
   });
 
-  function Item(props)
-{
-    return (
-        <Paper>
-            <h2>{props.item.name}</h2>
-            <p>{props.item.description}</p>
 
-            <Button className="CheckButton">
-                Check it out!
-            </Button>
-        </Paper>
-    )
-}
 
 const ProjectCard = (param) => {
     const [open, setOpen] = React.useState(false);
@@ -82,53 +71,80 @@ const ProjectCard = (param) => {
         setOpen(false);
     };
 
-    var items = [
-      {
-          name: "Random Name #1",
-          description: "Probably the most random thing you have ever seen!"
-      },
-      {
-          name: "Random Name #2",
-          description: "Hello World!"
-      }
-  ]
 
     return (
         <div>
-            <Card className={classes.root}>
-                <CardActionArea
-                    onClick={handleClickOpen}
-                >
-                    <CardMedia
-                        className={classes.media}
-                        image={projectList[param.index].logo}
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">
-                            {projectList[param.index].name}
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            {projectList[param.index].shortDescription}
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
+            <Card className={classes.root} align="left">
+                <CardMedia
+                    className={classes.media}
+                    image={projectList[param.index].logo}
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        {projectList[param.index].name}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        {projectList[param.index].shortDescription}
+                    </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small" color="inherit" onClick={handleClickOpen} align="center">
+                    Learn More
+                  </Button>
+                </CardActions>
             </Card>
                 <Dialog
                     fullScreen={fullScreen}
                     open={open}
                     onClose={handleClose}
                     aria-labelledby="responsive-dialog-title"
-                    maxWidth="xs"
+                    maxWidth="sm"
                 >
                 <DialogTitle id="responsive-dialog-title" onClose={handleClose}>
                     {projectList[param.index].name}
                 </DialogTitle>
                 <DialogContent dividers>
 
-                  <Carousel>
-                    {items.map( (item, i) => <Item key={i} item={item}/>)}
+
+
+                  <Carousel
+                    navButtonsAlwaysVisible="true"
+                    autoPlay="false"
+                    animation="slide"
+                  >
+                  {param.index === 3 ? <img className="contentLandscape" src={projectList[param.index].image1} 
+                      alt="Project Img 1"/> 
+                      : fullScreen ? <img className="contentMobile" src={projectList[param.index].image1} 
+                      alt="Project Img 1"/> 
+                      : <img className="contentPortrait" src={projectList[param.index].image1} 
+                      alt="Project Img 1"/> 
+                    }
+                      {param.index === 3 ? <img className="contentLandscape" src={projectList[param.index].image2} 
+                      alt="Project Img 2"/> 
+                      : fullScreen ? <img className="contentMobile" src={projectList[param.index].image2} 
+                      alt="Project Img 2"/> 
+                      : <img className="contentPortrait" src={projectList[param.index].image2} 
+                      alt="Project Img 2"/> 
+                    }
+                      {param.index === 3 || param.index === 1 ? <img className="contentLandscape" src={projectList[param.index].image3} 
+                      alt="Project Img 3"/> 
+                      : fullScreen ? <img className="contentMobile" src={projectList[param.index].image3} 
+                      alt="Project Img 3"/> 
+                      : <img className="contentPortrait" src={projectList[param.index].image3} 
+                      alt="Project Img 3"/> 
+                    }
                   </Carousel>
-                  
+                  <Typography >
+                      {projectList[param.index].shortDescription}
+                    </Typography>
+
+                  {param.index === 2 || param.index === 3 ? "" 
+                      : fullScreen ? <video className="contentMobile"  controls src={projectList[param.index].demo}/> 
+                      : param.index === 0 ? <video className="contentPortrait" controls src={projectList[param.index].demo}/> 
+                      : <video className="contentLandscape" controls src={projectList[param.index].demo}/> 
+                      }
+                      
+{/*
                     <Typography >
                       {projectList[param.index].shortDescription}
                     </Typography>
@@ -143,21 +159,21 @@ const ProjectCard = (param) => {
                       {projectList[param.index].shortDescription}
                     </Typography>
                     {param.index === 3 ? <img className="contentImageLandscape" src={projectList[param.index].image2} 
-                      alt="Project Img 1"/> 
+                      alt="Project Img 2"/> 
                       : fullScreen ? <img className="contentImagePortraitMobile" src={projectList[param.index].image2} 
-                      alt="Project Img 1"/> 
+                      alt="Project Img 2"/> 
                       : <img className="contentImagePortraitWeb" src={projectList[param.index].image2} 
-                      alt="Project Img 1"/> 
+                      alt="Project Img 2"/> 
                     }
                     <Typography >
                       {projectList[param.index].shortDescription}
                     </Typography>
                     {param.index === 3 || param.index === 1 ? <img className="contentImageLandscape" src={projectList[param.index].image3} 
-                      alt="Project Img 1"/> 
+                      alt="Project Img 3"/> 
                       : fullScreen ? <img className="contentImagePortraitMobile" src={projectList[param.index].image3} 
-                      alt="Project Img 1"/> 
+                      alt="Project Img 3"/> 
                       : <img className="contentImagePortraitWeb" src={projectList[param.index].image3} 
-                      alt="Project Img 1"/> 
+                      alt="Project Img 3"/> 
                     }
                     <Typography >
                       {projectList[param.index].shortDescription}
@@ -168,6 +184,7 @@ const ProjectCard = (param) => {
                       : <video className="contentVideoLandscape" controls
                       src={projectList[param.index].demo}/>
                       }
+                    */}
                 </DialogContent>
             </Dialog>
         </div>
