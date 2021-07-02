@@ -54,7 +54,7 @@ const projectList = [
     {
         "name": "PacAI",
         "shortDescription": "Multi-Agent Reinforcement Learning Pac-Man that calculates the best action over the given iterations, as well as many pacman variants such as multi-player capture-the-flag that involves adversarial search, Q-learning.",
-        "longDescription": "4lD",
+        "longDescription": "PacAI is a Multi-Agent Reinforcement Learning Pac-Man that calculates the best action over the given iterations. This project included many pacman variants such as multiplayer capture-the-flag that involves adversarial search and Q-learning. The main goal of this project was to learn and understand how artificial intelligence works in many different areas in our lives. One of the first ways to understand how artificial intelligence learns through experience and data was through games. Pacman was one of the more complex games among other turn-based games, such as chess or go. The minimax PacAI calculated the best course of actions based on the Minimax search and alpha-beta pruning, which calculates the outcome of all available decisions at a point in game by a Minimax tree stretching out. The Multi-Agent Reinforcement Learning PacAI incorporated adversarial search algorithms to calculate and create non-deterministic probabilistic decisions, which allowed the Pac-Man to “think for itself” upon many iterations of trials and data.",
         "logo": pacLogo,
         "image1": pacDiscount,
         "image2": pacReflex,
