@@ -1,6 +1,6 @@
 import React from "react";
 import wallpaper from "./images/whiteBackground.jpg";
-import portrait from "./images/portraitTest.jpg";
+import portrait from "./images/portraitTest2.jpg";
 import './Intro.css';
 
 const Intro = () => {

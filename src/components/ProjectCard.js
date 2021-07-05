@@ -134,9 +134,15 @@ const ProjectCard = (param) => {
                       alt="Project Img 3"/> 
                     }
                   </Carousel>
+                  <br/>
                   <Typography >
-                      {projectList[param.index].longDescription}
+                      {projectList[param.index].description1}
                   </Typography>
+                  <br/>
+                  <Typography >
+                      {projectList[param.index].description2}
+                  </Typography>
+                  <br/>
 
                   {param.index === 2 || param.index === 3 ? "" 
                       : fullScreen ? <video className="contentMobile"  controls src={projectList[param.index].demo}/> 
