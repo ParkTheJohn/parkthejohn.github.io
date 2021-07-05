@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio2021/static/css/main.883deac6.chunk.css",
-    "main.js": "/portfolio2021/static/js/main.f8278d4f.chunk.js",
-    "main.js.map": "/portfolio2021/static/js/main.f8278d4f.chunk.js.map",
+    "main.css": "/portfolio2021/static/css/main.18d93433.chunk.css",
+    "main.js": "/portfolio2021/static/js/main.da3640f6.chunk.js",
+    "main.js.map": "/portfolio2021/static/js/main.da3640f6.chunk.js.map",
     "runtime-main.js": "/portfolio2021/static/js/runtime-main.837aa3f0.js",
     "runtime-main.js.map": "/portfolio2021/static/js/runtime-main.837aa3f0.js.map",
     "static/js/2.bb020e54.chunk.js": "/portfolio2021/static/js/2.bb020e54.chunk.js",
     "static/js/2.bb020e54.chunk.js.map": "/portfolio2021/static/js/2.bb020e54.chunk.js.map",
     "index.html": "/portfolio2021/index.html",
-    "static/css/main.883deac6.chunk.css.map": "/portfolio2021/static/css/main.883deac6.chunk.css.map",
+    "static/css/main.18d93433.chunk.css.map": "/portfolio2021/static/css/main.18d93433.chunk.css.map",
     "static/js/2.bb020e54.chunk.js.LICENSE.txt": "/portfolio2021/static/js/2.bb020e54.chunk.js.LICENSE.txt",
     "static/media/FitRecurDemo.3b03793e.mp4": "/portfolio2021/static/media/FitRecurDemo.3b03793e.mp4",
-    "static/media/aboutMePortraitTest.43a15a22.jpg": "/portfolio2021/static/media/aboutMePortraitTest.43a15a22.jpg",
+    "static/media/aboutMePortraitTest2.05fe23ed.jpg": "/portfolio2021/static/media/aboutMePortraitTest2.05fe23ed.jpg",
     "static/media/chefLogo.4a624cc5.jpg": "/portfolio2021/static/media/chefLogo.4a624cc5.jpg",
     "static/media/chefQuestLog.42152020.png": "/portfolio2021/static/media/chefQuestLog.42152020.png",
     "static/media/chefQuestMain.6012fda0.png": "/portfolio2021/static/media/chefQuestMain.6012fda0.png",
@@ -29,13 +29,13 @@
     "static/media/pacDiscount.f8117ea5.png": "/portfolio2021/static/media/pacDiscount.f8117ea5.png",
     "static/media/pacLogo.5040b83b.png": "/portfolio2021/static/media/pacLogo.5040b83b.png",
     "static/media/pacReflex.b0108784.gif": "/portfolio2021/static/media/pacReflex.b0108784.gif",
-    "static/media/portraitTest.c7f1f3ed.jpg": "/portfolio2021/static/media/portraitTest.c7f1f3ed.jpg",
+    "static/media/portraitTest2.a4e28276.jpg": "/portfolio2021/static/media/portraitTest2.a4e28276.jpg",
     "static/media/whiteBackground.c0ce1944.jpg": "/portfolio2021/static/media/whiteBackground.c0ce1944.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.837aa3f0.js",
     "static/js/2.bb020e54.chunk.js",
-    "static/css/main.883deac6.chunk.css",
-    "static/js/main.f8278d4f.chunk.js"
+    "static/css/main.18d93433.chunk.css",
+    "static/js/main.da3640f6.chunk.js"
   ]
 }
